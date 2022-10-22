@@ -3,6 +3,7 @@ F1 - Google fonts - import - имя шрифта, убираем лишнее, �
 добавляем кавычки и запись :
 &display=swap&subset=cyrillic-ext
 */
+
 @font-face {
 	font-family: 'Gilroy';
 	src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
@@ -62,14 +63,52 @@ body {
 	line-height: 1;
 }
 
-/* ********************************************************** */
+/* ************************************** */
+.exsesise {
+	background-color:orangered;
+	padding: 30px;
+}
 
+.exsesise *:last-child{
+	margin-bottom: 0px;
+}
+
+/* .exsesise__extra {
+	margin-bottom: -30px;
+} */
+
+.extitle {
+	font-weight: 700;
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+
+.extext {
+	line-height: 120%;
+	margin: 0px 0px 30px 0px;
+	text-decoration: underline;
+}
+.extext span{
+	display: inline-block;
+}
+
+.exlink {
+	color:yellow;
+	display: inline-block;
+	margin: 0px 0px 30px 0px;
+}
+
+
+
+/* ************************************** */
 .homework {
 	margin: 50px 0px 60px 140px;
 	font-family: Gilroy;
 	background-color: rgb(245, 222, 235);
-	max-width: 1600px;
+	max-width: 90%;
+	/* display: none; */
 }
+
 .btn{
 	margin: 0px 0px 63px 0px;
 	/* background-color: rgb(250, 240, 151); */
@@ -96,7 +135,7 @@ body {
 	opacity: 60%;
 	text-align: right;
 	/* background-color: #fff; */
-
+	
 }
 
 .botton {
@@ -106,7 +145,6 @@ body {
 	line-height: 123%;
 	display: inline-block;
 	border-radius: 50px;
-	/* margin: 0px 30px 63px 0px; */
 	margin-left: 40px;
 }
 
@@ -118,8 +156,7 @@ body {
 	/* background-color: rgb(97, 103, 122); */
 	max-width: 100%;
 	text-align: center;
-	/* margin: 0px auto;  
-	/* margin: 0px 0px 0px auto; */
+	margin: 0px auto;  
 	font-size: 0;
 }
 
@@ -132,8 +169,8 @@ body {
 	margin-left: -30px;
 }
 /* ========================================== */
-.less{
-	background-color: rgb(228, 243, 161);
+
+.less {
 	width: 100%;
 	margin: 0px auto; 
 	padding: 20px 0px 0px 0px;
@@ -168,7 +205,7 @@ body {
 .sva__img{
 	margin: 0px auto;
 	max-width: 1200px;
-	text-align: center;
+	/* text-align: center; */
 	background-color: rgb(163, 247, 147);
 }
 img {
@@ -177,7 +214,693 @@ img {
 	
 	max-width: 100%;	
 }
-.text {}
-.none{
-	/* display: none; */
+.text {
+	background-color: green;
+}
+.less__none{
+	/* display: none;  */
+}
+/* 8888888888888888888888888888888888888 */
+.lesson-6 {
+	padding: 30px;
+	margin: 0px 0px 50px 0px;
+	line-height: 110%;
+	
+}
+.button{
+	/* задавая хайт мы ограничиваем высоту кнопки, и если
+	текст внутри нее будет в 2 строки, тело кнопки не увеличиться
+	и  дизайн нарушиться */
+	display: inline-block;
+	width: 300px;
+	height: 72px;
+	padding: 21px 56px;
+	background: #67CAE6;
+	border-radius: 50px;
+	font-family: Gilroy;
+	font-weight: 700;
+	color: #FEFEFE;
+	font-size: 24px;
+	line-height: 123.79%;
+	text-align: center;
+}
+
+.button__out{
+	opacity: 0.2;
+	border: 2px solid #000;
+	/* используя подбор высоты кнопки лайнхайт и паддином, открывается 
+	возможность увеличения высоты */
+	display: block;
+	margin: 20px;
+	/* нужно установить значение дисплей блок дял того чтобы
+	блок занял всю ширину родителя и ограничить ее по ширине 
+	значением максвидс */
+	max-width: 300px;
+	/* height: 72px; */
+	background: linear-gradient(93.83deg, #67CAE6 6.25%, #60A4F4 93.13%);
+	box-shadow: 0px 0px 30px rgba(100, 186, 236, 0.25);
+	border-radius: 50px;
+	/* тк кнопке задан максвидс и она может адаптироваться.
+	для паддинга слевасправа можно задать символический отступ.
+	на случай если кнопка уменьшиться, чтобы текст не прилипал 
+	к границам кнопки */
+	padding: 21.02px 10px;
+	text-align: center;
+	color: #FEFEFE;
+	font-family: Gilroy;
+	font-weight: 700;
+	font-size: 24px;
+	/* line-height: 123.79%; */
+	line-height: 29.98px;
+	
+}
+
+.wrapper{}
+.wrapper:hover .block-l6{
+	visibility: visible;
+	opacity: 1;
+}
+
+.block-l6 {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s ease 0s;
+	background-color: rgb(233, 135, 135);
+	border: 30px dashed #000;
+	/* border: 5px dotted #000; */
+	/* border: 5px solid #000; */
+	/* border: 5px solid transparent; */
+	width: 200px;
+	height: 200px;
+	margin: 20px 20px 20px auto;
+	padding: 35px;
+	text-align: center;
+	/* border-radius: 20px 30px 10px 50px; */
+	border-radius: 50%;
+	overflow: auto;
+}
+
+
+.inline-l6 {
+	background-color: rgb(179, 233, 119);
+	display: block;
+	outline: 5px solid #000;
+	margin: 0px 0px 20px 0px;
+
+}
+.foto1-l6{
+	/* display: inline-block; потому что остается строчным и выстраивается в ряд */
+	display: block;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 0px auto 20px 0px;
+	box-shadow: 5px 5px 5px 5px rgb(170, 48, 48), -5px -5px 5px 5px rgb(48, 56, 170);
+}
+.foto2-l6 {
+	width: 250px;
+	height: 250px;
+	filter: drop-shadow(10px 20px 5px rgb(97, 47, 214)); 
+	/* box-shadow: 5px 5px 5px 5px #c73a17; */
+	background-color: transparent;
+	/* margin: 0px 0px 30px 0px;  потому что для строчных НЕ работает*/
+	padding: 0px 100px 0px 0px;
+}
+.foto3-l6{
+	width: 250px;
+	height: 250px;
+	background-color: transparent;
+	filter: drop-shadow(-20px -20px 0px rgb(76, 163, 41));
+	opacity: 0.5;
+}
+/* ------------Lesson 7 ------------*/
+.background {}
+.bg {
+	padding: 50px;
+	color:#FEFEFE;
+	font-size: 40px;
+	line-height: 140%;
+	
+	background-color: rgb(185, 108, 108); 
+	background-repeat: no-repeat;	
+	background-position: center;
+	background-size: cover;
+	background-attachment: scroll; 
+	background-image: url('../img/Ukraine.jpg');
+
+	/* background: #000 url('../img/') 0 0 / cover no-repeat fixed; */
+		/* background: rgb(185, 108, 108) url('../img/love.png'); */
+		/* background: url('../img') 0 0 no-repeat; */
+}
+.bg-list {}
+.bg-list  li{
+	/* background: url('../img/check_icon_37.png') 0 5px / auto 13px no-repeat;  */
+	background: url('../img/check_icon_37.png') 0 5px no-repeat;
+	min-height: 19px;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 35px;
+	line-height: 120%;
+}
+.bg-btn{
+	
+	padding: 10px 30px;
+	display: block;
+	border-radius: 30px;
+	max-width: 300px;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 120%;
+	color: #FEFEFE;
+	margin: 20px 20px 20px 0px;
+	box-shadow: 0 3px 0px 0px #000;
+	background: red;
+}
+/* в случае когда к тексту привязана иконка */
+.bg-btn span{
+	padding: 0px 0px 0px 30px;
+	background: red url('../img/sparrow-svgrepo-com.svg') left / auto 100% no-repeat;
+}
+/* ============================================ */
+/* Lesson_7__background_home_work */
+/* ============================================ */
+.background-homework {}
+.bghw__item {
+	min-height: 200px;
+	border: 2px solid #000;
+	margin: 10px;
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.bghw__color img{
+	
+}
+.transparent {
+	background: url('../img/rooster-svgrepo-com.svg') center / auto 100% no-repeat;
+	background-color: transparent; 
+}
+.col {
+	background-color: rgb(130, 106, 240);
+}
+.colrgb {
+	background-color: rgb(223, 152, 152);
+}
+.colrgba {
+	background-color: rgba(231, 233, 81, 0.321);
+}
+.bghw__image {}
+.bghw-img {
+	background-image: url('../img/logo.png');
+}
+.linergrad {
+	background-image: linear-gradient(135deg, rgba(156, 28, 149, 1) 0%, rgba(228, 124, 234, 0.43) 45%, rgba(228, 124, 234, 0) 79%);
+}
+.radialgrad {
+	background-image: radial-gradient(ellipse at center, rgba(250, 233, 230, 1) 0%, rgba(246, 200, 192, 1) 21%, rgba(254, 169, 152, 1) 44%, rgba(255, 197, 159, 1) 63%, rgba(255, 157, 137, 1) 100%);
+	min-height: 300px;
+}
+.bghw__repeat {}
+.repeat-by-default {
+	background-image: url('../img/sparrow-svgrepo-com.svg');
+}
+.no-repeat {
+	background-image: url('../img/apple-logo-svg.png');
+	background-repeat: no-repeat;
+	background-size: 150px;
+}
+.repeat-x {
+	background-image: url('../img/check_icon_37.png');
+	background-repeat: repeat-x;
+	background-size: 50px;
+}
+.repeat-y {
+	background-image: url('../img/check_icon_37.png');
+	background-repeat: repeat-y;
+}
+.spase {
+	background-image: url('../img/sparrow-svgrepo-com.svg');
+	background-repeat: space;
+}
+.round {
+	/* не используется, тк при изменении экрана крартинка деформируется */
+	background-image: url('../img/shears.png');
+	background-size: 200px;
+	background-repeat: round;
+}
+.bghw__position {}
+.position-by-default {
+	background-image: url('../img/ititalyanskii-dvorik-logo.jpg');
+	background-repeat: no-repeat;
+}
+.center {
+	background-image: url('../img/sparrow-svgrepo-com.svg');
+	/* background-position: center; */
+	background-position: 50%; 
+	background-size: 100px;
+	background-repeat: no-repeat;
+	min-height: 400px;
+}
+.left {
+	/* background: url('../img/sparrow-svgrepo-com.svg') left/ 50px no-repeat; */
+	background: url('../img/sparrow-svgrepo-com.svg') 0 50%/ 50px no-repeat;
+}
+.right {
+	/* background: url('../img/sparrow-svgrepo-com.svg') 100% / 50px no-repeat; */
+	background: url('../img/sparrow-svgrepo-com.svg') right top / 50px no-repeat;
+}
+.position {
+	background: url('../img/bulldog.png') bottom right / 100px no-repeat;
+}
+.bghw__attachment {}
+.attachment-by-default {
+	background-image: url('../img/653420253.jpg');
+	min-height: 800px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.fixed {
+	background: url('../img/bulldog.png') 0 0 / 300px;
+	background-attachment: fixed;
+	min-height: 600px;
+}
+.local {
+	background-image: url('../img/Ukraine.jpg');
+	max-height: 500px;
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: local;
+	overflow: scroll;
+}
+.bghw__size  div {
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+	color: #FEFEFE;
+	text-transform: none;
+}
+div.size-by-default {
+	color: rgb(218, 51, 51);
+	background: url('../img/send.png') 0 0  /auto no-repeat;
+}
+.by-width {
+	background: url('../img/Ukraine.jpg') 0 0 / 100% no-repeat;
+}
+.by-hight {
+	background: url('../img/Ukraine.jpg') 0 0 / auto 100% no-repeat;
+}
+.stretch {
+	background: url('../img/Ukraine.jpg') 0 0 / 100% 100% no-repeat;
+}
+.contain {
+	font-size: 18px;
+	background: url('../img/Ukraine.jpg') 0 0 / contain no-repeat;
+}
+.cover {
+	background: url('../img/Ukraine.jpg') 0 0 / cover no-repeat;
+}
+div.sizes {
+	color: red;
+	background: url('../img/Ukraine.jpg') 0 0 / 200px 300px no-repeat;
+}
+.bghw__multi-img div{
+	display: inline-block;
+	width: 600px;
+	height: 600px;
+}
+.img-color {
+	background: rgb(134, 194, 189) url('../img/bulldog.png') 50px 0 / 40% no-repeat;
+}
+.two-img {
+	background: url('../img/bulldog.png') 0 0 / 40% no-repeat, url('../img/653420253.jpg') 0 0 / 100% no-repeat;
+}
+.three-img {
+	background: url('../img/bulldog.png') 0 0 / 30% no-repeat, url('../img/653420253.jpg') 0 0 / 60% no-repeat, url('../img/Ukraine.jpg') 0 0 / 100% no-repeat;
+}
+.four-img{
+	background: url('../img/firefox-logo-beta.svg') 0 0 / 30% no-repeat, url('../img/rooster-svgrepo-com.svg') 50% / 30% no-repeat, url('../img/love.png') 100% 100% / 30% no-repeat, url('../img/J_5G5HOj5Ps.jpg') 0 0 / cover no-repeat;
+}
+.bghw__list  li{
+	background: url('../img/b_3.gif') 0 top / 25px no-repeat;
+	margin: 0px 0px 0px 20px;
+	padding: 0px 0px 0px 0px;
+	line-height: 120%;
+	text-transform: capitalize;
+	font-style: italic;
+	text-indent: 35px;
+	font-size: 28px;
+}
+/* =============================================== */
+/* Lesson-8 */
+
+.lesson-8 {
+	margin: 20px 50px;
+	font-size: 40px;
+	background-color: rgb(170, 238, 238);
+	padding: 20px;
+	/* position: sticky;
+	top: 0; */
+}
+
+.lesson-8 a {
+	display: inline-block;
+	margin: 0px 50px 30px 0px;
+	padding: 10px 50px;
+	max-width: 650px;
+	border-radius: 50px;
+	border: 1px solid #000;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+}
+.link-8:focus{
+	border: 10px solid rgb(228, 52, 52);
+}
+
+/* псевдоклассы состояния */
+.link-8_first {
+	color: blue;
+}
+.link-8_first:hover {
+	color: #FEFEFE;
+	font-size: 16px;
+	background-color: rgb(233, 183, 183);
+	box-shadow: 0px 2px 10px 3px rgba(7, 7, 7, 0.5);
+	min-width: 600px;
+}
+
+/* псевдоклассы обращения */
+.link-8_second {
+	color: rgb(112, 192, 65);
+	/* visibility: hidden; */
+	text-shadow: 2px 2px 2px #000;
+}
+.lesson-8:hover .link-8_second{
+	background-color: rgba(187, 116, 98, 0.575);
+	/* visibility: visible; */
+}
+.link-8_first:hover + .link-8{
+	/* visibility: visible; */
+}
+.link-8_thersd {
+	background-color: #da9584;
+}
+.link-8_thersd:hover{
+	background-color: #fff;
+}
+.link-8_thersd:active {
+	background-color: red;
+	color: #FEFEFE;
+}
+.link-8_thersd:visited {
+	/* background-color: green;
+	color: #f5de0c;  */
+}
+.less-8__text{
+	margin: 0px 0px 50px 0px;
+	background-color: rgb(252, 250, 147);
+	border: 10px solid rgb(86, 9, 230);
+	box-shadow: inset 10px 2px 10px rgb(228, 98, 221), -45px 15px 10px rgb(148, 27, 27);
+	padding: 15px;
+	text-shadow: 50px 30px 3px rgba(0, 0, 0, 0.3);
+	position: sticky;
+	top: 0;
+}
+.less-8__text::before{
+	content: "";
+	width: 31px;
+	height: 25px;
+	display: inline-block;
+	background: url('../img/check_icon_37.png') 0 0 / cover no-repeat;
+}
+.less-8__text::after{
+	content: "'";
+}
+
+.less-8__list{
+	margin: 0px 0px 50px 0px;
+	font-size: 24px;
+	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.less-8__list li{
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 30px;
+}
+/* .less-8__list li::before {
+	content: '';
+	background: url('../img/check_icon_37.png') 0 0 no-repeat;
+	width: 40px;
+	height: 19px;
+	display: inline-block;
+	margin: 0px 0px 0px -40px;
+	
+} */
+
+.less-8__list li::before{
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: red;
+	border-radius: 50%;
+	margin: 0px 15px 0px -30px;
+}
+
+.less-8__list li:first-child::after {
+	content: '';
+	display: block; 
+	height: 3px;
+	max-width: 25%;
+	min-width:50px;
+	margin: 5px 0px 0px 0px;
+	background-color:#000;
+}
+/* ====================================== */
+/* lesson 9 */
+/* ====================================== */
+.less-9{
+	background-color: rgb(245, 241, 195);
+	font-size: 25px;
+	padding: 20px 20px;
+	margin: 20px;
+	border: 1px solid #000;
+	position: relative; 
+	
+}
+.less-9 div{
+	margin: 0px 0px 20px 0px;
+	text-indent: 35px;
+	text-align: justify;
+	border: 2px dotted #000;
+	padding: 8px;
+}
+.less-9 *:last-child {
+	margin-bottom: 0px;
+}
+.item-91 {
+	background-color: rgb(203, 240, 202);
+	position: relative;
+
+}
+/* .item-91:hover{
+	position: relative;
+	z-index: 1;
+} */
+
+div.item-92 {
+	background-color: rgb(243, 194, 228);
+	height: 80px;
+	width: 50%;
+	text-indent: 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0px;
+}
+.item-92 span{
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+	color: rgb(143, 14, 14);
+	background-color: #fff;
+	width: 400px;
+	border: 3px solid blue;
+	padding: 0px 0px 0px 20px;
+}
+/* .item-92:hover{
+	position: relative;
+	z-index: 1;
+} */
+
+.item-93 {
+	background-color: rgb(169, 194, 248);
+	position: relative; 
+	width: 90%;
+	top: 0;
+}
+/* .item-93:hover{
+	position: relative;
+	z-index: 1;
+} */
+
+.cyrkl {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	background-color: rgb(236, 189, 222);
+	text-align: center;
+	padding: 28px;
+	border-radius: 50%;
+	margin: 0px 0px 0px auto;
+	position: sticky;
+	right: 100px;
+	top: 0;
+}
+
+.les-9__list {
+	font-size: 30px;
+	line-height: 120%;
+	background-color: rgb(167, 162, 162);
+	padding: 50px;
+	color: rgb(252, 237, 248);
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	font-family: Arial;
+	text-align: justify;
+}
+.les-9__list li {
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 0px 50px;
+	position: relative;
+}
+.les-9__list li::before {
+	content: '';
+	display: inline-block; 
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color:rgb(122, 35, 118);
+	position: absolute;
+	top: 5px;
+	left: 0px;
+}
+.les-9__list li:last-child:before {
+	content: '';
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../img/sparrow-svgrepo-com.svg') 0 0 no-repeat;
+}
+
+
+/* ============================================================================= */
+/* это выпадающее меню */
+
+.header-less9 {
+	background-color: rgb(182, 240, 196);
+	margin: 0px 30px;
+}
+
+.header-less9__container {
+	max-width: 80%;
+	margin: 0px auto;
+	border: 1px dotted #000;
+}
+
+.header-less9__menu {}
+
+.header-less9__list {
+	font-size: 0px;
+}
+/* обращение к первому уровню li, для того чтобы в ряд выстроились только 
+li первого уровня, а второго мы можем выстроить отдельно
+displ inl block  - выстраивает их в ряд, делая строчно-блочными */
+.header-less9__list > li {
+	position: relative; 
+	display: inline-block;
+	margin: 0px 25px 0px 0px;
+}
+.header-less9__list li:last-child {
+	margin-right: 0;
+}
+
+.header-less9__link {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	/* 'этот паддинг для того чтобы он заработал в строчном теге
+	мы добавили дисплей инлайн блок, свойства будут строчно-блочного тега */
+	padding: 20px 0;
+	display: inline-block;
+	/* теперь ссылка занеимает всю высоту шапки и на нее легче попасть*/
+}
+
+
+/* position: absolute - потому что у родителя уже задан relativeб а как известно
+блок абсолют будет бежать по всем следующим блокам пока не найдет релейтив,
+нам как раз надо настоить блок относительно блока хедер */
+.header-less9__sub-list {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: #fff;
+	padding: 20px;
+	min-width: 250px;
+	z-index: 1;
+}
+.header-less9__sub-list li {
+	margin: 0px 0px 15px 0px;
+	
+}
+.header-less9__sub-list li:last-child {
+	margin-bottom: 0;
+}
+.header-less9__sub-list li::before{
+	content: '';
+	width: 15px;
+	height: 15px;
+	background: url('../img/rooster-svgrepo-com.svg') 0 0 no-repeat;
+	display: inline-block;
+	margin-right: 10px;
+}
+.header-less9__sub-link {
+	font-size: 20px;
+}
+.header-less9__sub-link:hover {
+	text-decoration: underline;
+	color: orange;
+}
+
+/*  обращаемся к li первого уровня в соотоянии хауэр и ищем 
+там  .header-less9__sub-list - наш выпадающий подсписок*/
+.header-less9__list>li:hover .header-less9__sub-list{
+	display: block;
+}
+
+/* если так оставить, тогда при наведении на пункт меню он будет красным, НО
+переходя на подпункты, цвет будет пробадать, тк хауер работает только при наведении */
+/* .header-less9__link:hover {
+	color: red;
+} */
+/* поэтому, для того чтобы пункт оставался гореть красным, когда мышка переходит на 
+подпункт нужно прописать так: */
+.header-less9__list>:hover .header-less9__link{
+	color: red;
+}
+
+/* чтобы на блок не действовало два развнозначных свойства, первое нужно отменить добавив 
+значение авто 
+обращаемся к последнему элементу блока лист и ищем в нем блок саб-лист */
+.header-less9__list li:last-child .header-less9__sub-list {
+	position: absolute;
+	left: auto;
+	right: 0px;
+	top: 100%;
+	background-color: rgb(234, 236, 82);
+
 }
